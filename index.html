@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конспект: WBS ТЦ «Триумф Молл»</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 1.4rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        p, li {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        .stage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .stage-item {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        .stage-item h3 {
+            font-size: 1.05rem;
+            color: #f1f5f9;
+            margin-bottom: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: rgba(37, 99, 235, 0.2);
+            color: var(--accent);
+        }
+        td {
+            color: #cbd5e1;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: rgba(56, 189, 248, 0.2);
+            color: var(--accent);
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WBS: Строительство ТЦ «Триумф Молл»</h1>
+            <p>Учебный конспект по лекции · Иерархическая структура работ, матрица ответственности и график</p>
+        </header>
+
+        <section class="card">
+            <h2>🎯 01. Цель и методология</h2>
+            <p><strong>Цель проекта:</strong> Построить полную иерархическую структуру работ (WBS) строительства ТЦ как основу для календарного графика, сметы и распределения ответственности.</p>
+            <p style="margin-top: 0.75rem;"><strong>Правила построения WBS:</strong></p>
+            <ul>
+                <li><strong>100%-правило:</strong> Нижние уровни в сумме дают 100% объёма верхнего уровня.</li>
+                <li><strong>Результат, а не действие:</strong> Элементы названы как поставляемые результаты (микро-цели).</li>
+                <li><strong>Уникальный код:</strong> Каждый пакет имеет индекс формата X.Y и закрепленного ответственного.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>🏗️ 02. Жизненный цикл проекта (6 Стадий и 30 Пакетов)</h2>
+            <div class="stage-grid">
+                <div class="stage-item">
+                    <h3>Стадия 1: Предпроектная</h3>
+                    <p>Права на землю, изыскания, концепция, ТУ, получение разрешения на строительство.</p>
+                </div>
+                <div class="stage-item">
+                    <h3>Стадия 2: Проектирование</h3>
+                    <p>АР, КР, инженерные разделы, пожарная безопасность, экспертиза и рабочая документация.</p>
+                </div>
+                <div class="stage-item">
+                    <h3>Стадия 3: Нулевой цикл</h3>
+                    <p>Ограждение, вынос сетей, котлован, фундаменты и свайное основание, гидроизоляция.</p>
+                </div>
+                <div class="stage-item">
+                    <h3>Стадия 4: Каркас и оболочка</h3>
+                    <p>Каркас здания, перекрытия, кровля, фасады, остекление, лифты и эскалаторы.</p>
+                </div>
+                <div class="stage-item">
+                    <h3>Стадия 5: Инженерия и отделка</h3>
+                    <p>ОВиК, ВК, ЭОМ, пожарные системы, подготовка помещений под аренду.</p>
+                </div>
+                <div class="stage-item">
+                    <h3>Стадия 6: Ввод в эксплуатацию</h3>
+                    <p>Благоустройство, навигация, пусконаладка, исполнительная документация, разрешение на ввод.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>📋 03. Матрица распределения ответственности (RACCI)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Стадия проекта</th>
+                        <th>Заказчик</th>
+                        <th>Проектировщик</th>
+                        <th>Генподрядчик</th>
+                        <th>Субподряд</th>
+                        <th>Технадзор</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Предпроектная</td>
+                        <td><span class="badge">Отвечает</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><span class="badge">Контроль</span></td>
+                    </tr>
+                    <tr>
+                        <td>2. Проектирование</td>
+                        <td><span class="badge">Утверждает</span></td>
+                        <td><span class="badge">Отвечает</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><span class="badge">Контроль</span></td>
+                    </tr>
+                    <tr>
+                        <td>3. Нулевой цикл</td>
+                        <td><span class="badge">Утверждает</span></td>
+                        <td><span class="badge">Контроль</span></td>
+                        <td><span class="badge">Отвечает</span></td>
+                        <td><span class="badge">Исполняет</span></td>
+                        <td><span class="badge">Контроль</span></td>
+                    </tr>
+                    <tr>
+                        <td>4. Каркас и оболочка</td>
+                        <td><span class="badge">Утверждает</span></td>
+                        <td><span class="badge">Контроль</span></td>
+                        <td><span class="badge">Отвечает</span></td>
+                        <td><span class="badge">Исполняет</span></td>
+                        <td><span class="badge">Контроль</span></td>
+                    </tr>
+                    <tr>
+                        <td>5. Инженерия и отделка</td>
+                        <td><span class="badge">Утверждает</span></td>
+                        <td><span class="badge">Контроль</span></td>
+                        <td><span class="badge">Отвечает</span></td>
+                        <td><span class="badge">Исполняет</span></td>
+                        <td><span class="badge">Контроль</span></td>
+                    </tr>
+                    <tr>
+                        <td>6. Ввод в эксплуатацию</td>
+                        <td><span class="badge">Отвечает</span></td>
+                        <td><span class="badge">Утверждает</span></td>
+                        <td><span class="badge">Исполняет</span></td>
+                        <td><span class="badge">Исполняет</span></td>
+                        <td><span class="badge">Контроль</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>⏱️ 04. Укрупненный календарный график (≈ 24 месяца)</h2>
+            <p>Длительность проекта разбита на 8 кварталов (К1–К8):</p>
+            <ul>
+                <li><strong>К1–К2:</strong> Предпроектные изыскания и разработка проектно-сметной документации.</li>
+                <li><strong>К3–К4:</strong> Нулевой цикл, устройство котлована, свайного основания и монтаж каркаса.</li>
+                <li><strong>К5–К6:</strong> Закрытие контура здания, монтаж фасадов и разводка инженерных систем.</li>
+                <li><strong>К7–К8:</strong> Чистовая отделка под арендаторов, пусконаладочные работы и ввод ТЦ в эксплуатацию.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>ТЦ «Триумф Молл» · Саратов · Курсовой / практический материал по управлению проектами</p>
+        </footer>
+    </div>
+</body>
+</html>
